@@ -1,38 +1,128 @@
-# create-svelte
+# Svelte
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
+## Necessário ter
 
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+Node
+IDE
 ```
 
-## Developing
+## Criando um projeto
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+```bash
+# criando um projeto na pasta atual
+npm create svelte@latest
+
+# criando um projeto em seminario
+npm create svelte@latest seminario
+```
+
+## Desenvolvimento
 
 ```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
-
-To create a production version of your app:
+## Build
 
 ```bash
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+## Preview
+```bash
+npm run preview
+```
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Arquivos .svelte
+```bash
+<script>
+</script>
+<main>
+</main>
+<style>
+</style>
+```  
+
+## Declarações
+```bash
+<script>
+	function handleClick() {
+		count += 1;
+	}
+</script>
+
+<button on:click={handleClick}>
+	Count: {count}
+</button>
+``` 
+
+## If Else
+```bash
+<script>
+	let x = 7;
+</script>
+{#if x > 10}
+	<p>{x} is greater than 10</p>
+{:else if 5 > x}
+	<p>{x} is less than 5</p>
+{:else}
+	<p>{x} is between 5 and 10</p>
+{/if}
+```
+
+## Each
+```bash
+<script>
+	let items = [1,2,3]
+</script>
+<ul>
+	{#each items as item}
+		<li>
+			{item}			
+		</li>
+	{/each}
+</ul>
+```
+
+## Store
+```bash
+<script>
+	import { count } from './stores.js';
+  
+	let countValue;
+  
+	count.subscribe(value => {
+		countValue = value;
+	});
+</script>
+```
+
+## Toast:	
+```bash
+npm i -D @zerodevx/svelte-toast
+```
+
+## Desabilitar SSR:
+```bash
+routes/+layout.js
+export const ssr = false;
+```
+  
+## Deploy automático:
+```bash
+Cloudflare Pages
+Netlify
+Vercel
+Azure Static Web Apps
+```
+
+## Vercel
+```bash
+Código no repositório do github
+Criar conta na Vercel
+Conectar ao github
+Permissão para todos os repositórios ou específicos
+Importar o repositório
+Deploy
+```
