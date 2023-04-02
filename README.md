@@ -1,5 +1,35 @@
 # Svelte
 
+## Licença
+
+```bash
+MIT
+```
+
+## Responsáveis pelo desenvolvimento
+
+```bash
+Criador: Rich Harris
+Comunidade
+```
+
+## Vantagens e Desvantagens
+```bash
+Menos código boilerplate.
+Compilado.
+Variáveis reativas usando $.
+Sem virtual DOM.
+Estilização por componente.
+Tem a própria solução para gerenciamento de estado.
+Framework não está incluso no bundle gerado.
+```
+```bash
+Comunidade menor que outros frameworks.
+Kit lançado em dezembro 2022.
+Pouco suporte em IDE.
+Poucas bibliotecas e recursos.
+```
+
 ## Necessário ter
 
 ```bash
@@ -16,7 +46,6 @@ npm create svelte@latest
 # criando um projeto em seminario
 npm create svelte@latest seminario
 ```
-
 ## Desenvolvimento
 
 ```bash
@@ -117,10 +146,17 @@ Vercel
 Azure Static Web Apps
 ```
 
-## Vercel
+## Adapters:
+```bash
+Cloudflare Workers
+Node servers
+static site generation (SSG)
+```
+
+## Vercel/Netlify
 ```bash
 Código no repositório do github
-Criar conta na Vercel
+Criar conta na Vercel/Netlify
 Conectar ao github
 Permissão para todos os repositórios ou específicos
 Importar o repositório
