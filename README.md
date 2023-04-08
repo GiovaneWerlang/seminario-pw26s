@@ -151,6 +151,12 @@ Azure Static Web Apps
 Cloudflare Workers
 Node servers
 static site generation (SSG)
+
+npm i -D @sveltejs/adapter-static
+
+svelte.config.js
+
+import adapter from '@sveltejs/adapter-static';
 ```
 
 ## Vercel/Netlify
