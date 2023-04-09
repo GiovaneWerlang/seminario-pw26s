@@ -11,9 +11,9 @@
         nextId.subscribe( value => next = value)
     })
 
-    let erroNome = undefined;
-    let erroCpf = undefined;
-    let erroEmail = undefined;
+    let erroNome: string | undefined = undefined;
+    let erroCpf: string | undefined = undefined;
+    let erroEmail: string | undefined = undefined;
 
     function nova():any{
         return {

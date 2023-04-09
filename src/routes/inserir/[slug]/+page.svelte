@@ -6,9 +6,9 @@
 	import { onMount } from 'svelte';
     import { store } from '../../../utils/store';
 
-    let erroNome = undefined;
-    let erroCpf = undefined;
-    let erroEmail = undefined;
+    let erroNome: string | undefined = undefined;
+    let erroCpf: string | undefined = undefined;
+    let erroEmail: string | undefined = undefined;
 
     function nova():any{
         return {
